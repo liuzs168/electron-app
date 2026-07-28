@@ -12,8 +12,16 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
+    ElDropdown: typeof import('element-plus/es')['ElDropdown']
+    ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
+    ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeSelector: typeof import('./src/components/ThemeSelector.vue')['default']
+    ThemeToggle: typeof import('./src/components/ThemeToggle.vue')['default']
     Versions: typeof import('./src/components/Versions.vue')['default']
   }
 }

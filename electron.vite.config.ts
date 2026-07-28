@@ -7,6 +7,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+// 引入Tailwind CSS
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig({
   main: {},
   preload: {},
@@ -19,7 +22,8 @@ export default defineConfig({
         '@router': resolve('src/renderer/src/router'),
         '@components': resolve('src/renderer/src/components'),
         '@utils': resolve('src/renderer/src/utils'),
-        '@api': resolve('src/renderer/src/api')
+        '@api': resolve('src/renderer/src/api'),
+        '@composables': resolve('src/renderer/src/composables')
       }
     },
     server: {
@@ -38,7 +42,8 @@ export default defineConfig({
       }),
       Components({
         resolvers: [ElementPlusResolver()]
-      })
+      }),
+      tailwindcss()
     ]
   }
 })
